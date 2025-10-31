@@ -34,8 +34,7 @@ int main(){
 
   for (int i = 1; i < 6; i++)
   {
-    for (int j = 1; j<
-      4 ; j++)
+    for (int j = 1; j < 4 ; j++)
     {
       double m = pow(i,j);
       cout<<"i = "<<i<<"; o = "<<m<<endl;
