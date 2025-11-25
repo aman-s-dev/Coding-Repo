@@ -65,28 +65,83 @@ int main(){
   //   }
   //   cout<<endl;
   //}
+  // for (int i=1; i<=4; i++){
+  //   int p1=0;
+  //   int p2=0;
+  //   if (i==4){
+  //     for (int q=7;q>0;q--){
+  //       cout<<"*";
+  //     }
+  //     cout<<endl;
+  //   }
+  //   else{
+  //     for (int p=1;p<=7;p++){
+  //       if (p+i==5 || p-i==3){
+  //         cout<<"*";
+  //       }
+  //       else{
+  //         cout<<" ";
+  //       }
+  //     }
+  //     cout<<endl;
+  //   }
+  // }
+  
+  // class test 1, question 1
+  // for (int i=1; i<=6; i++){
+  //   for (int j=i+1; j<=7; j++){
+  //     cout<<j;
+  //   }
+  //   cout<<endl;
+  // }
+
+  // // Class test 1, question 2 : Fibonacci sequence
+  // int n1=0,n2=1,n=0,count=0;
+  // cout<<n1<<" "<<n2<<" ";
+  // while (n<100){
+  //   n=n2+n1;
+  //   n1=n2;
+  //   n2=n;
+  //   if (n>100){
+  //     break;
+  //   }
+  //   cout<<n<<" ";
+  //   count++;
+  // }
+  // cout<<endl<<"count = "<<count<<endl;
+  // cout<<"Last term = "<<n1<<endl;
+
+  // //class test 1, question 3
   for (int i=1; i<=4; i++){
-    int p1=0;
-    int p2=0;
-    if (i==4){
-      for (int q=7;q>0;q--){
-        cout<<"*";
-      }
-      cout<<endl;
+    for (int j=4-i; j>0; j--){
+      cout<<" ";
     }
-    else{
-      for (int p=1;p<=7;p++){
-        if (p+i==5 || p-i==3){
-          cout<<"*";
-        }
-        else{
-          cout<<" ";
-        }
-      }
-      cout<<endl;
+    for (int j=i; j>=1; j--){
+      cout<<j;
     }
+    if (i>1){
+      for (int m=2; m<=i; m++){
+        cout<<m;
+      }
+    }
+    cout<<endl;
+  }
+
+  // //Pattern
+  for (int i=1; i<=4; i++){
+    for (int j=4-i; j>0; j--){
+      cout<<" ";
+    }
+    for (int j=1; j<=i; j++){
+      cout<<j;
+    }
+    if (i>1){
+      for (int m=i-1; m>0; m--){
+        cout<<m;
+      }
+    }
+    cout<<endl;
   }
 
   return 0;
 }
-

@@ -29,19 +29,156 @@ using namespace std;
 //     if (pctg>=75){
 //         cout<<"FIRST DIVISION !!!"<<endl;
 //     }
-    int n,e ;
+    // int n,e ;
+    // cout<<"Enter how many values to store : ";
+    // cin>>n;
+    // int input[n];
+    // for (int i=0; i<n; i++){
+    //     cout<<"Enter the "<<i<<"th element : ";
+    //     cin>>e;
+    //     input[i]=e;
+    // }
+    // cout<<endl;
+    // for (int i=0; i<=n; i++){
+    //     cout<<input[i]<<" ";
+    // }
+    // cout<<endl;
+
+    // array ke andr arry = matrix
+    
+    // int m,n;
+    // cout<<"Enter the order of the 2 matrices(m,n) : ";
+    // cin>>m>>n;
+    // int a[m][n], b[m][n], c[m][n];
+    // for (int i=0; i<m; i++){
+    //     for (int j=0; j<n; j++){
+    //         cout<<"a["<<i<<"]["<<j<<"] = ";
+    //         cin>>a[m][n];
+    //     }
+    // }
+    // for (int i=0; i<m; i++){
+    //     for (int j=0; j<n; j++){
+    //         cout<<"b["<<i<<"]["<<j<<"] = ";
+    //         cin>>b[m][n];
+    //     }
+    // }
+    // // matrix addition
+    // int x,y;
+    // for (int i=0; i<m; i++){
+    //     for (int j=0; j<n; j++){
+    //         x=a[i][j];
+    //         y=b[i][j];
+    //         c[i][j] = x+y;
+    //     }
+    // }
+    // for (int i=0; i<m; i++){
+    //     for (int j=0; j<n; j++){
+    //         cout<<a[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    // //WAP to find out the additon of all numbers of an array, addition of all even and odd numbers
+    // int n,e ;
+    // cout<<"Enter how many values to store : ";
+    // cin>>n;
+    // int a[n];
+    // for (int i=0; i<n; i++){
+    //     cout<<"Enter the "<<i<<"th element : ";
+    //     cin>>e;
+    //     a[i]=e;
+    // }
+    // cout<<endl;
+    // for (int i=0; i<n; i++){
+    //     cout<<a[i]<<" ";
+    // }
+    // cout<<endl;
+    // int sum=0, os=0, es=0, odd=0, ei=0, oi=0 ;
+    // for (int i=0; i<n; i++){
+    //     sum+=(a[i]);
+    // }
+    // cout<<"sum of all numbers of the array = "<<sum<<endl;
+    // for (int i=0; i<n; i++){
+    //     if ((a[i])%2==0){
+    //         es=es+a[i];
+    //     }
+    //     else {
+    //         odd=a[i];
+    //         os=os+odd;
+    //     }
+    // }
+    // cout<<"sum of evens = "<<es<<endl;
+    // cout<<"sum of odds = "<<os<<endl;
+    // cout<<endl;
+    // odd=0;
+    // for (int i=0; i<n; i++){
+    //     if (i%2==0){
+    //         ei=ei+a[i];
+    //     }
+    //     else {
+    //         odd=a[i];
+    //         oi=oi+odd;
+    //     }
+    // }
+    // cout<<"sum of even index numbers = "<<ei<<endl;
+    // cout<<"sum of odd  index numbers = "<<oi<<endl;
+    // cout<<endl;
+
+    // // WAP to find the biggest & smallest number in the array
+    // int n,e ;
+    // cout<<"Enter how many values to store : ";
+    // cin>>n;
+    // int a[n];
+    // for (int i=0; i<n; i++){
+    //     cout<<"Enter the "<<i<<"th element : ";
+    //     cin>>e;
+    //     a[i]=e;
+    // }
+    // cout<<endl;
+    // for (int i=0; i<n; i++){
+    //     cout<<a[i]<<" ";
+    // }
+    // cout<<endl;
+    // int big=a[0],small=a[0],locb=0, locs=0;
+    // for (int i=0; i<n; i++){
+    //     if(a[i]>big){
+    //         big=a[i];
+    //         locb = i;
+    //     }
+    //     else if (a[i]<small){
+    //         small=a[i];
+    //         locs = i;
+    //     }
+    // }
+    // cout<<big<<" at "<<locb<<"th index"<<endl;
+    // cout<<small<<" at "<<locs<<"th index"<<endl;
+
+    // //WAP to print marks of top 3 students
+    int ns,marks ;
     cout<<"Enter how many values to store : ";
-    cin>>n;
-    int input[n];
-    for (int i=0; i<n; i++){
-        cout<<"Enter the "<<i<<"th element : ";
-        cin>>e;
-        input[i]=e;
+    cin>>ns;
+    int m[ns];
+    for (int i=0; i<ns; i++){
+        cout<<"Enter the marks of student ("<<(i+1)<<") : ";
+        cin>>marks;
+        m[i]=marks;
     }
+    int h1=0, h2=0, h3=0;
     cout<<endl;
-    for (int i=0; i<=n; i++){
-        cout<<input[i]<<" ";
+    for (int i=0; i<ns; i++){
+        cout<<m[i]<<" ";
+        for (int i=0; i<ns; i++){
+            if (m[i]>h1){
+                h1=m[i];
+            }
+            else if (m[i]<h1 && m[i]>h3){
+                h2=m[i];
+            }
+            else if (m[i]<h2 && m[i]>0){
+                h3=m[i];
+            }
+        }
     }
-    cout<<endl;
+    cout<<h1<<" "<<h2<<" "<<h3<<endl;
     return 0;    
 }
