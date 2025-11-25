@@ -44,8 +44,9 @@ using namespace std;
     // }
     // cout<<endl;
 
-    // array ke andr arry = matrix
+    // //array ke andr array = matrix
     
+    // //Matrices elements input
     // int m,n;
     // cout<<"Enter the order of the 2 matrices(m,n) : ";
     // cin>>m>>n;
@@ -53,27 +54,25 @@ using namespace std;
     // for (int i=0; i<m; i++){
     //     for (int j=0; j<n; j++){
     //         cout<<"a["<<i<<"]["<<j<<"] = ";
-    //         cin>>a[m][n];
+    //         cin>>a[i][j];
     //     }
     // }
     // for (int i=0; i<m; i++){
     //     for (int j=0; j<n; j++){
     //         cout<<"b["<<i<<"]["<<j<<"] = ";
-    //         cin>>b[m][n];
+    //         cin>>b[i][j];
     //     }
     // }
     // // matrix addition
     // int x,y;
     // for (int i=0; i<m; i++){
     //     for (int j=0; j<n; j++){
-    //         x=a[i][j];
-    //         y=b[i][j];
-    //         c[i][j] = x+y;
+    //         c[i][j] = a[i][j] + b[i][j];
     //     }
     // }
     // for (int i=0; i<m; i++){
     //     for (int j=0; j<n; j++){
-    //         cout<<a[i][j]<<" ";
+    //         cout<<c[i][j]<<" ";
     //     }
     //     cout<<endl;
     // }
@@ -154,31 +153,56 @@ using namespace std;
     // cout<<small<<" at "<<locs<<"th index"<<endl;
 
     // //WAP to print marks of top 3 students
-    int ns,marks ;
-    cout<<"Enter how many values to store : ";
-    cin>>ns;
-    int m[ns];
-    for (int i=0; i<ns; i++){
-        cout<<"Enter the marks of student ("<<(i+1)<<") : ";
-        cin>>marks;
-        m[i]=marks;
-    }
-    int h1=0, h2=0, h3=0;
-    cout<<endl;
-    for (int i=0; i<ns; i++){
-        cout<<m[i]<<" ";
-        for (int i=0; i<ns; i++){
-            if (m[i]>h1){
-                h1=m[i];
-            }
-            else if (m[i]<h1 && m[i]>h3){
-                h2=m[i];
-            }
-            else if (m[i]<h2 && m[i]>0){
-                h3=m[i];
-            }
-        }
-    }
-    cout<<h1<<" "<<h2<<" "<<h3<<endl;
-    return 0;    
+    // int ns,marks ;
+    // cout<<"Enter how many values to store : ";
+    // cin>>ns;
+    // int m[ns];
+    // for (int i=0; i<ns; i++){
+    //     cout<<"Enter the marks of student ("<<(i+1)<<") : ";
+    //     cin>>marks;
+    //     m[i]=marks;
+    // }
+    // int h1=0, h2=0, h3=0;
+    // cout<<endl;
+    // for (int i=0; i<ns; i++){
+    //     cout<<m[i]<<" ";
+    //     for (int i=0; i<ns; i++){
+    //         if (m[i]>h1){
+    //             h1=m[i];
+    //         }
+    //         else if (m[i]<h1 && m[i]>h3){
+    //             h2=m[i];
+    //         }
+    //         else if (m[i]<h2 && m[i]>0){
+    //             h3=m[i];
+    //         }
+    //     }
+    // }
+    // cout<<h1<<" "<<h2<<" "<<h3<<endl;
+
+    // //number Palindrome check by GEMINI
+    // int n, originalNum, remainder, reversedNum = 0;
+    // cout << "Enter a positive integer: ";
+    // cin >> n;
+
+    // // Store the original value because 'n' will be destroyed in the loop
+    // originalNum = n;
+
+    // // Logic to reverse the number
+    // while (n > 0) {
+    //     remainder = n % 10;                  // 1. Get the last digit
+    //     reversedNum = (reversedNum * 10) + remainder; // 2. Append it to reversedNum
+    //     n = n / 10;                          // 3. Remove the last digit from n
+    // }
+
+    // // Check if the reversed number matches the original
+    // if (originalNum == reversedNum) {
+    //     cout << originalNum << " is a Palindrome number.";
+    // } else {
+    //     cout << originalNum << " is NOT a Palindrome number.";
+    // }
+
+    // //number Palindrome check by AMAN SHUKLA (in vector.cpp)
+
+     return 0;    
 }
