@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
+    // //Number Palindrome check
     int n;
     vector<int> num;
     cout<<"Enter the number digit by digit (ENTER) and to end the input, enter -1 : "<<endl;

@@ -152,33 +152,33 @@ using namespace std;
     // cout<<big<<" at "<<locb<<"th index"<<endl;
     // cout<<small<<" at "<<locs<<"th index"<<endl;
 
-    // //WAP to print marks of top 3 students
-    // int ns,marks ;
-    // cout<<"Enter how many values to store : ";
-    // cin>>ns;
-    // int m[ns];
-    // for (int i=0; i<ns; i++){
-    //     cout<<"Enter the marks of student ("<<(i+1)<<") : ";
-    //     cin>>marks;
-    //     m[i]=marks;
-    // }
-    // int h1=0, h2=0, h3=0;
-    // cout<<endl;
-    // for (int i=0; i<ns; i++){
-    //     cout<<m[i]<<" ";
-    //     for (int i=0; i<ns; i++){
-    //         if (m[i]>h1){
-    //             h1=m[i];
-    //         }
-    //         else if (m[i]<h1 && m[i]>h3){
-    //             h2=m[i];
-    //         }
-    //         else if (m[i]<h2 && m[i]>0){
-    //             h3=m[i];
-    //         }
-    //     }
-    // }
-    // cout<<h1<<" "<<h2<<" "<<h3<<endl;
+    //WAP to print marks of top 3 students
+    int ns,marks ;
+    cout<<"Enter how many values to store : ";
+    cin>>ns;
+    int m[ns];
+    for (int i=0; i<ns; i++){
+        cout<<"Enter the marks of student ("<<(i+1)<<") : ";
+        cin>>marks;
+        m[i]=marks;
+    }
+    int h1=0, h2=0, h3=0;
+    cout<<endl;
+    for (int i=0; i<ns; i++){
+        if (m[i]>h1){
+            h3=h2;
+            h2=h1;
+            h1=m[i];
+        }
+        else if (m[i]<h1 && m[i]>h2){
+            h3=h2;
+            h2=m[i];
+            }
+        else if (m[i]<h2 && m[i]>h3){
+            h3=m[i];
+        }
+    }
+    cout<<h1<<" "<<h2<<" "<<h3<<endl;
 
     // //number Palindrome check by GEMINI
     // int n, originalNum, remainder, reversedNum = 0;
