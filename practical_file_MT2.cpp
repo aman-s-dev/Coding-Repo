@@ -51,55 +51,60 @@ int main(){
     // cout<<"Last term = "<<a<<endl;
 
     // // 4.3 Armstrong
-    int num;
-    vector<int> digits;
-    cout<<"Enter the number for armstrong check: ";
-    cin>>num;
-    int og=num, dig;
-    while (num>0){
-        dig=num%10;
-        digits.push_back(dig);
-        num=num/10;
-    }
-    int N=digits.size();
-    int sum=0, prod=1, d;
-    for (int i=0; i<N; i++){
-        d=digits[i];
-        for (int j=1; j<=N; j++){
-            prod*=d;
-        }
-        sum=sum+prod;
-        prod=1;
-    }
-    if (sum==og){
-        cout<<sum<<" is an armstrong number.";
-    }    
-    else{
-        cout<<sum<<" is NOT an armstrong number.";
-    }
+    // int num;
+    // vector<int> digits;
+    // cout<<"Enter the number for armstrong check: ";
+    // cin>>num;
+    // int og=num, dig;
+    // while (num>0){
+    //     dig=num%10;
+    //     digits.push_back(dig);
+    //     num=num/10;
+    // }
+    // int N=digits.size();
+    // int sum=0, prod=1, d;
+    // for (int i=0; i<N; i++){
+    //     d=digits[i];
+    //     for (int j=1; j<=N; j++){
+    //         prod*=d;
+    //     }
+    //     sum=sum+prod;
+    //     prod=1;
+    // }
+    // if (sum==og){
+    //     cout<<sum<<" is an armstrong number.";
+    // }    
+    // else{
+    //     cout<<sum<<" is NOT an armstrong number.";
+    // }
 
     // 5.1
     int numx;
-    vector<int> ogdigitx;
     vector<int> digitx;
-    cout<<"Enter the number for armstrong check: ";
+    cout<<"Enter the number for 'sum of digits' check: ";
     cin>>numx;
-    int ogx=numx, digx;
+    int digx;
     while (numx>0){
         digx=numx%10;
         digitx.push_back(digx);
         numx=numx/10;
     }
-
-    int size=digitx.size();
-    int sumd=0, i=0;
+    int sumx=0;
     do{
-        sum+=digitx[i];
-        i++;
-    }
-    while (i<size);
+        while (sumx>0){
+            digx=sumx%10;
+            digitx.push_back(digx);
+            sumx=sumx/10;
+        }
+        for (int i=0; i<digitx.size(); i++){
+            sumx+=digitx[i];
+        }
+        digitx.clear();
+    }while (sumx>9);
+    cout<<sumx<<endl;
 
     // 5.2
+    
 
     // 5.3
     for (int i=1; i<=5; i++){
