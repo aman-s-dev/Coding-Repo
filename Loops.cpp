@@ -112,24 +112,24 @@ int main(){
   // cout<<"Last term = "<<n1<<endl;
 
   // //class test 1, question 3
-  for (int i=1; i<=4; i++){
-    for (int j=4-i; j>0; j--){
-      cout<<" ";
-    }
-    for (int j=i; j>=1; j--){
-      cout<<j;
-    }
-    if (i>1){
-      for (int m=2; m<=i; m++){
-        cout<<m;
-      }
-    }
-    cout<<endl;
-  }
+  // for (int i=1; i<=4; i++){
+  //   for (int j=4-i; j>0; j--){
+  //     cout<<" ";
+  //   }
+  //   for (int j=i; j>=1; j--){
+  //     cout<<j;
+  //   }
+  //   if (i>1){
+  //     for (int m=2; m<=i; m++){
+  //       cout<<m;
+  //     }
+  //   }
+  //   cout<<endl;
+  // }
 
   // //Pattern
-  for (int i=1; i<=4; i++){
-    for (int j=4-i; j>0; j--){
+  for (int i=1; i<=5; i++){
+    for (int j=5-i; j>0; j--){
       cout<<" ";
     }
     for (int j=1; j<=i; j++){
