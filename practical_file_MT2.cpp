@@ -150,7 +150,18 @@ int main(){
     }
     cout<<h1<<" "<<h2<<" "<<h3<<endl;
 
-    // 6.2
+    // 6.2 Binary search
+    int n,low, upp;
+    cout<<"How many numbers ?: ";
+    cin>>n;
+    int list[n];
+    int ele;
+    cout<<"Enter the numbers one-by-one:"<<endl;
+    for (int i=0; i<n; i++){
+        cin>>ele;
+        list[i]=ele;
+    }
+    
 
 
     // 6.3
