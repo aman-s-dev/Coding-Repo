@@ -7,20 +7,20 @@ int main(){
     // char op;
     // cout<<"Enter the two operands: ";
     // cin>>n1>>n2;
-    // cout<<"Enter the operator: ";
+    // cout<<"Enter the operator (1 for +, 2 for -, 3 for *, 4 for /): ";
     // cin>>op;
     // switch (op)
     // {
-    // case '+':
+    // case '1':
     //     cout<<"Sum = "<<n1+n2;
     //     break;
-    // case '-':
+    // case '2':
     //     cout<<"Difference = "<<n1-n2;
     //     break;
-    // case '*':
+    // case '3':
     //     cout<<"Product = "<<n1*n2;
     //     break;
-    // case '/':
+    // case '4':
     //     if (n2!=0){
     //         cout<<"Quotient = "<<n1/n2;
     //     }
@@ -156,11 +156,31 @@ int main(){
     cin>>n;
     int list[n];
     int ele;
-    cout<<"Enter the numbers one-by-one:"<<endl;
+    cout<<"Enter the numbers one-by-one in ASCENDING order: "<<endl;
     for (int i=0; i<n; i++){
         cin>>ele;
         list[i]=ele;
     }
+    int x;
+    low=list[0];
+    upp=list[list.size()-1];
+    int mid;
+    while(low==upp){
+        mid = low + (upp - low)/2;
+        if (list[mid]==x){
+            return mid;
+        }
+        else if (list[mid]<x){
+            low=mid+1;
+        }
+        else{
+            upp=mid-1;
+        }
+    }
+    
+    if(==-1){cout<<"Element not present";}
+    else{cout<<"Element is present at position "<<mid+1;}
+
     
 
 
