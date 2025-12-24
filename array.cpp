@@ -77,52 +77,44 @@ using namespace std;
     //     cout<<endl;
     // }
 
-    // //WAP to find out the additon of all numbers of an array, addition of all even and odd numbers
-    // int n,e ;
-    // cout<<"Enter how many values to store : ";
-    // cin>>n;
-    // int a[n];
-    // for (int i=0; i<n; i++){
-    //     cout<<"Enter the "<<i<<"th element : ";
-    //     cin>>e;
-    //     a[i]=e;
-    // }
-    // cout<<endl;
-    // for (int i=0; i<n; i++){
-    //     cout<<a[i]<<" ";
-    // }
-    // cout<<endl;
-    // int sum=0, os=0, es=0, odd=0, ei=0, oi=0 ;
-    // for (int i=0; i<n; i++){
-    //     sum+=(a[i]);
-    // }
-    // cout<<"sum of all numbers of the array = "<<sum<<endl;
-    // for (int i=0; i<n; i++){
-    //     if ((a[i])%2==0){
-    //         es=es+a[i];
-    //     }
-    //     else {
-    //         odd=a[i];
-    //         os=os+odd;
+    // int p,q,r;
+    // cout<<"Matrix Multiplication: AB\nEnter the order matrix A(p,q) : ";
+    // cin>>q>>p;
+    // int A[p][q];
+    // for (int i=1; i<=p; i++){
+    //     for (int j=1; j<=q; j++){
+    //         cout<<"A["<<i<<"]["<<j<<"] = ";
+    //         cin>>A[i][j];
     //     }
     // }
-    // cout<<"sum of evens = "<<es<<endl;
-    // cout<<"sum of odds = "<<os<<endl;
-    // cout<<endl;
-    // odd=0;
-    // for (int i=0; i<n; i++){
-    //     if (i%2==0){
-    //         ei=ei+a[i];
+    // cout<<"Enter the order matrix B(q,r) : ";
+    // cin>>q>>r;
+    // int B[q][r];
+    // for (int i=1; i<=q; i++){
+    //     for (int j=1; j<=r; j++){
+    //         cout<<"B["<<i<<"]["<<j<<"] = ";
+    //         cin>>B[i][j];
     //     }
-    //     else {
-    //         odd=a[i];
-    //         oi=oi+odd;
+    // }   
+    // int sump[q][r];
+    // int sum=0; 
+    // for (int t=1; t<=r; t++){
+    //     for (int i=1; i<=p; i++){
+    //         for(int s=1,j=1; s<=q && j<=q; s++, j++){
+    //             sum+=((A[i][j])*(B[s][t]));
+    //         }
+    //         sump[i][t]=sum;
+    //         sum=0;
     //     }
     // }
-    // cout<<"sum of even index numbers = "<<ei<<endl;
-    // cout<<"sum of odd  index numbers = "<<oi<<endl;
-    // cout<<endl;
-
+    // cout<<"Product AB = C :"<<endl;
+    // for (int i=1; i<=p; i++){
+    //     for (int j=1; j<=r; j++){
+    //         cout<<sump[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // } 
+    
     // // WAP to find the biggest & smallest number in the array
     // int n,e ;
     // cout<<"Enter how many values to store : ";
@@ -153,32 +145,32 @@ using namespace std;
     // cout<<small<<" at "<<locs<<"th index"<<endl;
 
     //WAP to print marks of top 3 students
-    int ns,marks ;
-    cout<<"Enter how many values to store : ";
-    cin>>ns;
-    int m[ns];
-    for (int i=0; i<ns; i++){
-        cout<<"Enter the marks of student ("<<(i+1)<<") : ";
-        cin>>marks;
-        m[i]=marks;
-    }
-    int h1=0, h2=0, h3=0;
-    cout<<endl;
-    for (int i=0; i<ns; i++){
-        if (m[i]>h1){
-            h3=h2;
-            h2=h1;
-            h1=m[i];
-        }
-        else if (m[i]<h1 && m[i]>h2){
-            h3=h2;
-            h2=m[i];
-            }
-        else if (m[i]<h2 && m[i]>h3){
-            h3=m[i];
-        }
-    }
-    cout<<h1<<" "<<h2<<" "<<h3<<endl;
+    // int ns,marks ;
+    // cout<<"Enter how many values to store : ";
+    // cin>>ns;
+    // int m[ns];
+    // for (int i=0; i<ns; i++){
+    //     cout<<"Enter the marks of student ("<<(i+1)<<") : ";
+    //     cin>>marks;
+    //     m[i]=marks;
+    // }
+    // int h1=0, h2=0, h3=0;
+    // cout<<endl;
+    // for (int i=0; i<ns; i++){
+    //     if (m[i]>h1){
+    //         h3=h2;
+    //         h2=h1;
+    //         h1=m[i];
+    //     }
+    //     else if (m[i]<h1 && m[i]>h2){
+    //         h3=h2;
+    //         h2=m[i];
+    //         }
+    //     else if (m[i]<h2 && m[i]>h3){
+    //         h3=m[i];
+    //     }
+    // }
+    // cout<<h1<<" "<<h2<<" "<<h3<<endl;
 
     // //number Palindrome check by GEMINI
     // int n, originalNum, remainder, reversedNum = 0;
