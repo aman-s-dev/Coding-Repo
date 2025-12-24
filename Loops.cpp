@@ -128,20 +128,40 @@ int main(){
   // }
 
   // //Pattern
-  for (int i=1; i<=5; i++){
-    for (int j=5-i; j>0; j--){
-      cout<<" ";
-    }
-    for (int j=1; j<=i; j++){
-      cout<<j;
-    }
-    if (i>1){
-      for (int m=i-1; m>0; m--){
-        cout<<m;
+  // for (int i=1; i<=5; i++){
+  //   for (int j=5-i; j>0; j--){
+  //     cout<<" ";
+  //   }
+  //   for (int j=1; j<=i; j++){
+  //     cout<<j;
+  //   }
+  //   if (i>1){
+  //     for (int m=i-1; m>0; m--){
+  //       cout<<m;
+  //     }
+  //   }
+  //   cout<<endl;
+  // }
+
+  // Pattern : difficult
+  int max;
+  cout<<"maximum number of stars in a line: ";
+  cin>>max;
+  int maxl=2*max+1;
+  int lmax= 2*(2*maxl-1)-1;
+  for (int i=1; i<=lmax; i++){
+    if (i%2==1){
+      for (int j=1; j<= (-0.5)*(abs(i-maxl))+max; j++){
+        cout<<"* ";
+      }
+    }else if (i%2==0){
+      for (int j=1; j<= (-0.5)*(abs(i-maxl))+(maxl/2); j++){
+        cout<<" *";
       }
     }
-    cout<<endl;
+    cout<<"\n";
   }
+  
 
   return 0;
 }
