@@ -71,38 +71,39 @@ using namespace std;
 //     return 0;
 // }
 
-int prime(int n){
-    vector<int> primes;
-    bool yn=false;
-    for (int i=1; i<=n; i++){
-        if (i%2==0 || i%3==0 || i%10==5){
-            continue;
-        }
-        else{
-            for (int j=1; j<primes[primes.size()-1]; j++){
-                if (i%j!=0){
-                    continue;
-                }
-                else{
-                    yn=true;
-                    break;
-                }
-            }
-            if (yn==false){
-                primes.push_back(i);
-            }
-        }
-    }
-    int i=0;
-    while (i<primes.size()){
-        cout<<primes[i]<<" ";
-        i++;
-    }
-}
-int main(){
-    int ln;
-    cout<<"Enter the number upto which primes you need : ";
-    cin>>ln;
-    prime(ln);
+// int prime(int n){
+//     vector<int> primes;
+//     bool yn=false;
+//     for (int i=1; i<=n; i++){
+//         if (i%2==0 || i%3==0 || i%10==5){
+//             continue;
+//         }
+//         else{
+//             for (int j=1; j<primes[primes.size()-1]; j++){
+//                 if (i%j!=0){
+//                     continue;
+//                 }
+//                 else{
+//                     yn=true;
+//                     break;
+//                 }
+//             }
+//             if (yn==false){
+//                 primes.push_back(i);
+//             }
+//         }
+//     }
+//     int i=0;
+//     while (i<primes.size()){
+//         cout<<primes[i]<<" ";
+//         i++;
+//     }
+// }
+// int main(){
+//     int ln;
+//     cout<<"Enter the number upto which primes you need : ";
+//     cin>>ln;
+//     prime(ln);
 
-}
+// }
+
