@@ -144,23 +144,26 @@ int main(){
   // }
 
   // Pattern : difficult
-  int max;
-  cout<<"maximum number of stars in a line: ";
-  cin>>max;
-  int maxl=2*max+1;
-  int lmax= 2*(2*maxl-1)-1;
-  for (int i=1; i<=lmax; i++){
-    if (i%2==1){
-      for (int j=1; j<= (-0.5)*(abs(i-maxl))+max; j++){
-        cout<<"* ";
-      }
-    }else if (i%2==0){
-      for (int j=1; j<= (-0.5)*(abs(i-maxl))+(maxl/2); j++){
-        cout<<" *";
-      }
-    }
-    cout<<"\n";
-  }
+  // int max;
+  // cout<<"maximum number of stars in a line: ";
+  // cin>>max;
+  // int maxl=2*max+1;
+  // int lmax= 2*(2*maxl-1)-1;
+  // for (int i=1; i<=lmax; i++){
+  //   if (i%2==1){
+  //     for (int j=1; j<= (-0.5)*(abs(i-maxl))+max; j++){
+  //       cout<<"* ";
+  //     }
+  //   }else if (i%2==0){
+  //     for (int j=1; j<= (-0.5)*(abs(i-maxl))+(maxl/2); j++){
+  //       cout<<" *";
+  //     }
+  //   }
+  //   cout<<"\n";
+  // }
+  
+  // Butterfly pattern
+  int wing;
   
 
   return 0;

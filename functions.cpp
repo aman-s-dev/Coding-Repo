@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 #include<vector>
 using namespace std;
 // void ispalindrome(){
@@ -104,6 +105,55 @@ using namespace std;
 //     cout<<"Enter the number upto which primes you need : ";
 //     cin>>ln;
 //     prime(ln);
-
 // }
+
+// Minor matrix
+int minor(float A[int n][int n], int r, int c){
+    vector<float> Mlist;
+    int M[n-1][n-1];
+    for (int i=0; i<n; i++){
+        for (int j=0; j<n; j++){
+            if (i==r || j==c){
+                continue;
+            }else{
+                Mlist.push_back(A[i][j]);
+            }
+        }
+    }
+    int count=0;
+    for (int i=0; i<n-1; i++){
+        for (int j=0; j<n-1; j++){
+            M[i][j]=Mlist[count];
+            count++;
+        }
+    }
+    return M;
+}
+
+
+// Determinant of matrix of order using recursion
+    int determinant(float A[int n][int n]){
+        if (n==2){
+            float p = A[1][1]*A[2][2] + A[2][1]*A[1][2]; 
+            return p;
+        }else{
+            float sum=0;
+            for (int i=1; i<=n; i++){
+
+                sum+=(pow(-1,i+1))*(A[i-1][0])*(determinant(minor))
+            }
+        }
+    }
+
+    int p,q;
+    cin>>p>>q;
+    int A[p][q];
+    for (int i=1; i<=p; i++){
+        for (int j=1; j<=q; j++){
+            cout<<"A["<<i<<"]["<<j<<"] = ";
+            cin>>A[i][j];
+        }
+    }
+    
+
 
