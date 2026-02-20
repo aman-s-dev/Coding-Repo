@@ -163,8 +163,70 @@ int main(){
   // }
   
   // Butterfly pattern
-  int wing;
-  
+  // int n;
+  // cout<<"n = ";
+  // cin>>n;
+  // int stars=0;
+  // int spaces=2*n-1;
+  // for (int i=1; i<=2*n-1; i++){
+  //   if(i<=n){
+  //     spaces-=2;
+  //     stars++;
+  //   }
+  //   else{
+  //     spaces+=2;
+  //     stars--;
+  //   }
+  //   for (int j=1; j<=stars; j++){
+  //     cout<<"*";
+  //   }
+  //   for (int j=1; j<=spaces; j++){
+  //     cout<<" ";
+  //   }
+  //   for (int j=1; j<=stars; j++){
+  //     if (j!=n){
+  //       cout<<"*";
+  //     }
+  //   }
+  //   cout<<"\n";
+  // }
 
+  // pascal triangle
+  // cout<<c;
+  // c=c*(row-i)/i;
+  
+  // for (int i=0; i<30; i++){
+  //   for (int j=0; j<i; j++){
+  //     if((i+j)%2==0){
+  //       cout<<1;
+  //     }else{ cout<<0; }
+  //   }
+  //   cout<<endl;
+  // }
+  // for (int i=0; i<20; i++){
+  //   for (char j='A'; j<='A'+i; j++){
+  //     cout<<j;
+  //   }
+  //   cout<<endl;
+  // }
+  // int n=1;
+  // for (int i=1; i<=5; i++){
+  //   for (int j=0; j<i; j++){
+  //     cout<<n;
+  //     n++;
+  //   }
+  //   cout<<"\n";
+  // }
+
+  // valid phone number
+  int n,x,tb;
+	cin>>n>>x;
+	tb=n*x;
+	if(tb>=10000 && tb<=99999){
+	    cout<<"yes";
+	}else{
+	    cout<<"no";
+	}
+  
   return 0;
 }

@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 int main(){
     // // 4.1
@@ -210,42 +209,48 @@ int main(){
     // else{cout<<"Element is present at position "<<mid+1<<endl;}
 
     // //6.3
-    int p,q,r;
-    cout<<"Matrix Multiplication: AB\nEnter the order matrix A(p,q) : ";
-    cin>>q>>p;
-    int A[p][q];
-    for (int i=1; i<=p; i++){
-        for (int j=1; j<=q; j++){
-            cout<<"A["<<i<<"]["<<j<<"] = ";
-            cin>>A[i][j];
-        }
-    }
-    cout<<"Enter the order matrix B(q,r) : ";
-    cin>>q>>r;
-    int B[q][r];
-    for (int i=1; i<=q; i++){
-        for (int j=1; j<=r; j++){
-            cout<<"B["<<i<<"]["<<j<<"] = ";
-            cin>>B[i][j];
-        }
-    }   
-    int sump[q][r];
-    int sum=0; 
-    for (int t=1; t<=r; t++){
-        for (int i=1; i<=p; i++){
-            for(int s=1,j=1; s<=q && j<=q; s++, j++){
-                sum+=((A[i][j])*(B[s][t]));
-            }
-            sump[i][t]=sum;
-            sum=0;
-        }
-    }
-    cout<<"Product AB = C :"<<endl;
-    for (int i=1; i<=p; i++){
-        for (int j=1; j<=r; j++){
-            cout<<sump[i][j]<<" ";
-        }
-        cout<<endl;
-    }
+    // int p,q,r;
+    // cout<<"Matrix Multiplication: AB\nEnter the order matrix A(p,q) : ";
+    // cin>>q>>p;
+    // int A[p][q];
+    // for (int i=1; i<=p; i++){
+    //     for (int j=1; j<=q; j++){
+    //         cout<<"A["<<i<<"]["<<j<<"] = ";
+    //         cin>>A[i][j];
+    //     }
+    // }
+    // cout<<"Enter the order matrix B(q,r) : ";
+    // cin>>q>>r;
+    // int B[q][r];
+    // for (int i=1; i<=q; i++){
+    //     for (int j=1; j<=r; j++){
+    //         cout<<"B["<<i<<"]["<<j<<"] = ";
+    //         cin>>B[i][j];
+    //     }
+    // }   
+    // int sump[q][r];
+    // int sum=0; 
+    // for (int t=1; t<=r; t++){
+    //     for (int i=1; i<=p; i++){
+    //         for(int s=1,j=1; s<=q && j<=q; s++, j++){
+    //             sum+=((A[i][j])*(B[s][t]));
+    //         }
+    //         sump[i][t]=sum;
+    //         sum=0;
+    //     }
+    // }
+    // cout<<"Product AB = C :"<<endl;
+    // for (int i=1; i<=p; i++){
+    //     for (int j=1; j<=r; j++){
+    //         cout<<sump[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    string n="12340";
+    do{
+        cout<<n<<"  ";
+    }while(next_permutation(n.begin(),n.end()));
+
     return 0;
  }

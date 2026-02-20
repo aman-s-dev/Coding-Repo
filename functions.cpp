@@ -72,34 +72,6 @@ using namespace std;
 //     return 0;
 // }
 
-// int prime(int n){
-//     vector<int> primes;
-//     bool yn=false;
-//     for (int i=1; i<=n; i++){
-//         if (i%2==0 || i%3==0 || i%10==5){
-//             continue;
-//         }
-//         else{
-//             for (int j=1; j<primes[primes.size()-1]; j++){
-//                 if (i%j!=0){
-//                     continue;
-//                 }
-//                 else{
-//                     yn=true;
-//                     break;
-//                 }
-//             }
-//             if (yn==false){
-//                 primes.push_back(i);
-//             }
-//         }
-//     }
-//     int i=0;
-//     while (i<primes.size()){
-//         cout<<primes[i]<<" ";
-//         i++;
-//     }
-// }
 // int main(){
 //     int ln;
 //     cout<<"Enter the number upto which primes you need : ";
@@ -108,52 +80,82 @@ using namespace std;
 // }
 
 // Minor matrix
-int minor(float A[int n][int n], int r, int c){
-    vector<float> Mlist;
-    int M[n-1][n-1];
-    for (int i=0; i<n; i++){
-        for (int j=0; j<n; j++){
-            if (i==r || j==c){
-                continue;
-            }else{
-                Mlist.push_back(A[i][j]);
-            }
+// int minor(float A[int n][int n], int r, int c){
+//     vector<float> Mlist;
+//     int M[n-1][n-1];
+//     for (int i=0; i<n; i++){
+//         for (int j=0; j<n; j++){
+//             if (i==r || j==c){
+//                 continue;
+//             }else{
+//                 Mlist.push_back(A[i][j]);
+//             }
+//         }
+//     }
+//     int count=0;
+//     for (int i=0; i<n-1; i++){
+//         for (int j=0; j<n-1; j++){
+//             M[i][j]=Mlist[count];
+//             count++;
+//         }
+//     }
+//     return M;
+// }
+
+
+// // Determinant of matrix of order using recursion
+// int determinant(float A[int n][int n]){
+//     if (n==2){
+//         float p = A[1][1]*A[2][2] + A[2][1]*A[1][2]; 
+//         return p;
+//     }else{
+//         float sum=0;
+//         for (int i=1; i<=n; i++){
+
+//             sum+=(pow(-1,i+1))*(A[i-1][0])*(determinant(minor))
+//         }
+//     }
+// }
+
+// int p,q;
+// cin>>p>>q;
+// int A[p][q];
+// for (int i=1; i<=p; i++){
+//     for (int j=1; j<=q; j++){
+//         cout<<"A["<<i<<"]["<<j<<"] = ";
+//         cin>>A[i][j];
+//     }
+// }
+
+void primes(int N){
+    vector<int> primes;
+    bool isp;
+    int it;
+    for (int n=1; n<=N; n++){
+        it=0;
+        for (int i=primes[it]; i<n/i ;it++){
+            if (n%primes[it]==0){
+                isp=false;
+                break;
+            }else{ isp=true; }
+        }
+        if (isp==true){
+            primes.push_back(n);
         }
     }
-    int count=0;
-    for (int i=0; i<n-1; i++){
-        for (int j=0; j<n-1; j++){
-            M[i][j]=Mlist[count];
-            count++;
-        }
+    int ite=0;
+    for (int i=primes[ite]; ite<=primes.size()-1; ite++){
+        cout<<i<<" ";
     }
-    return M;
+    cout<<primes[10];
 }
 
+int main(){
+    int m;
+    cin>>m;
+    primes(m);
+}
 
-// Determinant of matrix of order using recursion
-    int determinant(float A[int n][int n]){
-        if (n==2){
-            float p = A[1][1]*A[2][2] + A[2][1]*A[1][2]; 
-            return p;
-        }else{
-            float sum=0;
-            for (int i=1; i<=n; i++){
-
-                sum+=(pow(-1,i+1))*(A[i-1][0])*(determinant(minor))
-            }
-        }
-    }
-
-    int p,q;
-    cin>>p>>q;
-    int A[p][q];
-    for (int i=1; i<=p; i++){
-        for (int j=1; j<=q; j++){
-            cout<<"A["<<i<<"]["<<j<<"] = ";
-            cin>>A[i][j];
-        }
-    }
     
 
 
