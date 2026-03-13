@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
+#include <bits/stdc++.h>
 using namespace std;
 int main(){
   // for (int i = 1;i<=10;i++){   /*using FOR loop*/
@@ -219,14 +217,38 @@ int main(){
   // }
 
   // valid phone number
-  int n,x,tb;
-	cin>>n>>x;
-	tb=n*x;
-	if(tb>=10000 && tb<=99999){
-	    cout<<"yes";
-	}else{
-	    cout<<"no";
-	}
+  // int n,x,tb;
+	// cin>>n>>x;
+	// tb=n*x;
+	// if(tb>=10000 && tb<=99999){
+	//     cout<<"yes";
+	// }else{
+	//     cout<<"no";
+	// }
+
+  // even odd
+  // int n,x,even,odd;
+  // cin>>n;
+  // for (int i=0; i<n; i++){
+  //   cin>>x;
+  //   if (x==0){
+  //     even++;
+  //   }else{
+  //     odd++;
+  //   }
+  // }
+  // if (even>odd){
+  //   cout<<"even";
+  // }
+  // else if(odd>even){
+  //   cout<<"odd";
+  // }
+  // else{
+  //   cout<<"tie";
+  // }
+
+  
+
   
   return 0;
 }

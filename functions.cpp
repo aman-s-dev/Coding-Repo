@@ -79,28 +79,30 @@ using namespace std;
 //     prime(ln);
 // }
 
-// Minor matrix
-// int minor(float A[int n][int n], int r, int c){
-//     vector<float> Mlist;
-//     int M[n-1][n-1];
-//     for (int i=0; i<n; i++){
-//         for (int j=0; j<n; j++){
-//             if (i==r || j==c){
-//                 continue;
-//             }else{
-//                 Mlist.push_back(A[i][j]);
-//             }
-//         }
-//     }
-//     int count=0;
-//     for (int i=0; i<n-1; i++){
-//         for (int j=0; j<n-1; j++){
-//             M[i][j]=Mlist[count];
-//             count++;
-//         }
-//     }
-//     return M;
-// }
+// Minor of element of a matrix
+int cofac(float &A[int n][int n], int &r, int &c){
+    //matrix A is square, obv !!
+    (n==2){
+           int minordet;
+   
+       }
+    if (n>2){
+        vector<int> minormat;
+        for (int i=0; i<n; i++){
+            for (int j=0; j<n; j++){
+                if (i==r || j==c){
+                    continue;
+                }else{
+                    minormat.push_back(A[i][j]);
+                }
+            }
+        }
+        return 
+    }
+    int count=0;
+    
+    return Mlist;
+}
 
 
 // // Determinant of matrix of order using recursion

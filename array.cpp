@@ -196,5 +196,30 @@ using namespace std;
 
     // //number Palindrome check by AMAN SHUKLA (in vector.cpp)
 
+    // int n;
+    // cin>>n;
+	// int nlist[n];
+	// int x, count1=0;
+	// for (int i=0; i<n; i++){
+	//     cin>>x;
+	//     nlist[i]=x;
+	//     if (x==1){
+	//         count1++;
+	//     }
+	// }
+	// int remlist[n-1];
+	// for (int i=0, k=0; i<n && k<(n-1); i++){
+	//     if (i!=count1){
+	//         remlist[k]=nlist[i];
+	//         k++;
+	//     }
+	// }
+	// for (int j=0; j<(n-1); j++){
+	//     cout<<remlist[j]<<" ";
+	// }
+
+    
+
+
      return 0;    
 }

@@ -43,8 +43,20 @@ int main(){
     cout<<*it<<endl;
     vector<int>::iterator ite=v.end()-1;
     cout<<*ite<<endl;
+    for (auto it : v1){
+        cout<<it<<" ";
+    }
     v.clear();
     cout<<v[2];
+
+    
+
+
+
+
+
+
+    
     
     return 0;
 }
