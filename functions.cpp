@@ -151,12 +151,17 @@ void primes(int N){
     }
     cout<<primes[10];
 }
+int len(int arrr[]){
+    
+}
 
 int main(){
     int m;
     cin>>m;
     primes(m);
 }
+
+
 
     
 
