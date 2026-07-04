@@ -2,15 +2,15 @@
 using namespace std;
 
 class Node {
-public:
-    int data;
-    Node* next;
-    Node* prev;
-    Node(int value) {  //constructor of node class
-        data = value;
-        next = NULL;
-        prev = NULL;
-    }                                                                                                             
+    public:
+        int data;
+        Node* next;
+        Node* prev;
+        Node(int value) {  //constructor of node class
+            data = value;
+            next = NULL;
+            prev = NULL;
+        }     
 };
 
 class DoublyLL {    //This class is used for LinkedList
@@ -26,11 +26,10 @@ class DoublyLL {    //This class is used for LinkedList
             Node* ptr = new Node(value);       //ptr id the pointer name of new Node
     
             if (head == NULL) {
-                head = tail = ptr;
-            } else {
-                ptr->next = head;
                 head->prev = ptr;
-                head = ptr;
+            } 
+            ptr->next = head;
+            head = ptr;
             }
         }
         
@@ -97,4 +96,4 @@ class DoublyLL {    //This class is used for LinkedList
             }
             cout << "NULL" << endl;
         }   
-}
+};

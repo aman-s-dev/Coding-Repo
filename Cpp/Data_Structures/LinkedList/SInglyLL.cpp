@@ -2,13 +2,13 @@
 using namespace std;
 
 class Node {
-public:
-    int data;
-    Node* next;
-    Node(int value) {  //constructor of node class
-        data = value;
-        next = NULL;
-    }
+    public:
+        int data;
+        Node* next;
+        Node(int value) {  //constructor of node class
+            data = value;
+            next = NULL;
+        }
 };
 
 class SinglyLL {    //This class is ued for LinkedList
@@ -79,12 +79,6 @@ class SinglyLL {    //This class is ued for LinkedList
     
             Node* temp = head;
             head = head->next;
-    
-            if (head == NULL) {
-                tail = NULL;
-            }
-    
-            cout << "Deleted: " << temp->data << endl;
             delete temp;
         }
     
@@ -152,23 +146,13 @@ class SinglyLL {    //This class is ued for LinkedList
                 return;
             }
         
-            if (head == tail) {
-                cout << "Deleted: " << head->data << endl;
-                delete head;
-                head = tail = NULL;
-                return;
-            }
-        
             Node* temp = head;
             while (temp->next != tail) {
                 temp = temp->next;
             }
-        
-            cout << "Deleted: " << tail->data << endl;
-            delete tail;
-        
-            tail = temp;
             tail->next = NULL;
+            delete tail;
+            tail = temp;
         }
             
         // Searching
