@@ -1,6 +1,3 @@
-
-
-
 ## LECTURE 3.6 & 3.7
 for i in range(9,0,-2):
     print(1,2,3,sep='/',end='\t')
