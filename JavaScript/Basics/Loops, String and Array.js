@@ -28,6 +28,11 @@ for (dim in object){
     console.log(object[dim])
 }
 
+// FOREACH
+x = [1,2,3,4];
+x.forEach(i => console.log(i**4)); // or even a function
+
+
 // DO WHILE
 let i = 0;
 do{

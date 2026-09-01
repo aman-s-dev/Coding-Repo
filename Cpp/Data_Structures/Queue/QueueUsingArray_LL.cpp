@@ -17,8 +17,7 @@ class Queue{                                    // using ARRAY
     }
 
     bool isEmpty(){
-        if (front == -1)  return true;
-        else return false;
+        return (front == -1)  ;
     }
 
     bool isFull(){
@@ -157,7 +156,7 @@ class CircularQ{                         // CIRCULAR QUEUE  using ARRAY
     public:
     CircularQ(int n){
         size = n;
-        q = new int[size];    // WTF just happened ???
+        q = new int[size];    
         front = -1;
         rear = -1;
     }

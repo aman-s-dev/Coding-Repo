@@ -18,7 +18,7 @@ Modules: Understand import and export to organize your code into maintainable fi
 Fetch API: Connect your frontend to the outside world.Project Goal: Build an app that fetches data from a public API (like a Weather dashboard or a Movie search tool).  
 
 ***Phase 4: The Ecosystem (Tooling & Types)
-Once you have the logic down, it's time to work like an engineer.
+Once you have the logic down, it's time to work like an engineer. 
 TypeScript: In 2026, TypeScript is essentially the industry standard. It adds type safety to JavaScript, which prevents bugs before you even run the code. 
 Version Control: You must know Git. Treat it as part of your development workflow, not an afterthought.
 Build Tools: Get familiar with modern bundlers like Vite; they make your development experience significantly faster than older tools.

@@ -1,0 +1,1 @@
+// int val = 'a'; gives val = 97 (ASCII)

@@ -248,7 +248,8 @@ int main(){
   // }
 
   
-
+  int x = 'a';
+  cout<<x;
   
   return 0;
 }

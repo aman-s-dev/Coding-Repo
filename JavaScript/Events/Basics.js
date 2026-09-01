@@ -1,6 +1,7 @@
 
 // JavaScript Events are actions or occurrences that happen in the browser. They can be triggered by various user interactions or by the browser itself.
 // Events :  onmouseover, onmouseout, mouseenter, mouseleave, oukeydown, onkeyup, onchange, onload, onsubmmit, onfocus, onblur
+//                        OMIT OUT 'on' PREFIX WHILE USING WITH 'addEventListener'
 
 // Event Listener : when an event with a DOM element occurs, an event handler/listener executes a function 
 //                : Syntax :  ""  element.addEventListener(event, function, useCapture);  ""
@@ -18,4 +19,25 @@ btn.addEventListener("click", () => {
 
 // IMPORTANT : when the event occurs, compiler check for 'true' in every EL of that event in every ancestor of the element starting from the outermost 
 // and then runs the ones with 'true' down to the target even when it does'nt have 'true' and then goes back upwards to run every other EL with no 'true'
+
+const list = document.createElement('ul');
+// const list1 = document.getElementsByName('li')
+
+function responding(evt){
+    if (evt.target.nodeName == 'LI'){
+        // alert("Response");
+        document.getElementsByTagName('li').textContent.style.color = "blue"; 
+    }
+}
+for (var i=1; i<=5; i++){
+    const child = document.createElement('li');
+    child.textContent = 'Line '+i;
+    list.appendChild(child);
+}
+list.addEventListener('click', responding);
+document.body.appendChild(list);
+
+// PREVENT Defaults
+// using 'return false' statement or preventDefault()
+
 
