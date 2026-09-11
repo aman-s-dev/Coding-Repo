@@ -139,7 +139,10 @@ class QueueLL{                                    // using LINKED LIST
             return;
         }
         Node* temp = front;
-        while (temp->next != NULL)  cout<< temp->data <<" ";
+        while (temp != NULL)  {
+            cout<< temp->data <<" ";
+            temp = temp->next;
+        }
         cout<<"\n";
         return;
     }
@@ -190,7 +193,8 @@ class CircularQ{                         // CIRCULAR QUEUE  using ARRAY
             front = -1;
             rear = -1;
         }else front = (front + 1)%size;
-        return;
+        return; 
+
     }
 
     void peek(){
@@ -223,11 +227,10 @@ class CircularQLL{                                    // using LINKED LIST
     CircularQLL(){
         front = NULL;
         rear = NULL;
-        rear->next = front;
     }
 
     bool isEmpty(){
-        return (front == Null);
+        return (front == NULL);
     }
     // No isFull() 
 
@@ -253,6 +256,7 @@ class CircularQLL{                                    // using LINKED LIST
         if (front == rear){
             int val = temp->data;
             delete temp;
+            cout<<"Deleted Front Element : "<< val <<"\n";
             front = rear = NULL;
             cout<<"Queue is Empty now !\n";
             return;
@@ -279,7 +283,10 @@ class CircularQLL{                                    // using LINKED LIST
             return;
         }
         Node* temp = front;
-        while (temp->next != NULL)  cout<< temp->data <<" ";
+        do{
+            cout<< temp->data <<" ";
+            temp = temp->next;
+        }while (temp != front)  ;
         cout<<"\n";
         return;
     }
@@ -290,18 +297,19 @@ class CircularQLL{                                    // using LINKED LIST
 //==============================================================================
 
 int main(){
-    int n;
-    cin>>n;
+    // cout<<"Circular Queue using Linked List\n";
+    // int n;
+    // cin>>n;
 
-    CircularQ q(n);  
+    CircularQLL q;  
     int choice;
     int val;
 
     do{          
-        cout<<"\n1. Enqueue \n";
-        cout<<"2. Dequeue \n";
-        cout<<"3. Peek \n";
-        cout<<"4. Display \n";
+        cout<<"\n1. Enqueue \t";
+        cout<<"2. Dequeue \t";
+        cout<<"3. Peek \t";
+        cout<<"4. Display \t";
         cout<<"5. Exit \n";
         cout<<"Enter your operation : ";
         cin>>choice;
